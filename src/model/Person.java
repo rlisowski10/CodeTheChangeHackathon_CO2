@@ -12,10 +12,10 @@ public class Person {
     }
 
     public int calcRunningTotalCO2() {
-        int tempSum = 0;
+        int totalCO2 = 0;
 
-        for (Day d : days) {
-
+        for (Day day : days) {
+            totalCO2 += 1;
         }
         return 1;
     }
