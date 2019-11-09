@@ -1,13 +1,14 @@
 package controller;
 
-import model.Challenge;
-import view.View;
+
+import model.*;
+import view.*;
 
 public class ChallengeController {
-    private View theView;
+    private userJoinChallenge theView;
     private Challenge theModel;
 
-    public ChallengeController(View theView, Challenge theModel) {
+    public ChallengeController() {
         this.theModel = theModel;
         this.theView = theView;
     }
