@@ -19,7 +19,7 @@ public class Person {
 
     public void addDay(int dayNum, int km, String mode) {
         Day day = new Day(dayNum, km, mode);
-        days.set(dayNum, day);
+        days.add(day);
     }
 
     public String toString() {
@@ -34,6 +34,7 @@ public class Person {
 
     public static void main(String[] args) {
         Person testPerson = new Person(3);
+        System.out.println(testPerson.days.size());
         testPerson.addDay(1, 20, "car");
         testPerson.addDay(2, 10, "bus");
         testPerson.addDay(3, 50, "car");
