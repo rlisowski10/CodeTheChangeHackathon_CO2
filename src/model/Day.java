@@ -1,6 +1,6 @@
 package model;
 
-public class Day implements IModeCO2 {
+class Day implements IModeCO2 {
 
     private int dayNum;
     private int km;

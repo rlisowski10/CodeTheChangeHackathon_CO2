@@ -2,13 +2,14 @@ package model;
 
 import java.util.ArrayList;
 
-public class Person {
+class Person {
     private String name;
     private ArrayList<Day> days;
     private int runningTotalCO2 = 0;
 
-    public Person(int lengthOfChallenge) {
+    public Person(String name) {
         days = new ArrayList<Day>();
+        this.name = name;
     }
 
     public void calcRunningTotalCO2() {
