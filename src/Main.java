@@ -8,5 +8,10 @@ public class Main {
 
         System.out.println(Day1);
 
+        userJoinChallenge viewUserJoinChallenge = new userJoinChallenge();
+
+        viewUserJoinChallenge.setVisible(true);
+
+
     }
 }
