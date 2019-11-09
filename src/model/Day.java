@@ -2,11 +2,13 @@ package model;
 
 public class Day implements IModeCO2 {
 
+    private int dayNum;
     private int km;
     private String mode;
     private int dayCO2;
 
-    public Day(int km, String mode) {
+    public Day(int dayNum, int km, String mode) {
+        this.dayNum = dayNum;
         this.km = km;
         this.mode = mode;
         this.dayCO2 = calcDayC02(); //get CO2
@@ -25,6 +27,15 @@ public class Day implements IModeCO2 {
 
     private int calcDayC02() {
         return this.km * getModeCO2();
+    }
+
+    public int getDayCO2() {
+        return this.dayCO2;
+    }
+
+    public String toString() {
+        return "Day " + this.dayNum + " | km: " + this.km + " | mode: " + this.mode
+        + "\nTotal CO2 (kg): " + this.dayCO2/1000;
     }
 
 }
