@@ -8,7 +8,7 @@ public class Person {
     private int runningTotalCO2 = 0;
 
     public Person(int lengthOfChallenge) {
-        days = new ArrayList<Day>(lengthOfChallenge);
+        days = new ArrayList<Day>();
     }
 
     public void calcRunningTotalCO2() {
@@ -33,6 +33,9 @@ public class Person {
     }
 
     public static void main(String[] args) {
+        int five = 5;
+        System.out.println(five);
+        
         Person testPerson = new Person(3);
         System.out.println(testPerson.days.size());
         testPerson.addDay(1, 20, "car");
