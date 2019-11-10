@@ -115,7 +115,10 @@ public class userJoinChallenge extends JFrame {
     }
 
     public String getUserName(){
-        return textField2.getText();
+
+        String name = textField2.getText();
+        textField2.setText("");
+        return name;
     }
     // JFormDesigner - End of variables declaration  //GEN-END:variables
 }

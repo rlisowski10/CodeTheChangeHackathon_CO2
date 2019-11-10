@@ -14,6 +14,7 @@ public class ChallengeController {
 
     public ChallengeController(Challenge theModel) {
         this.theModel = theModel;
+        this.dashboard = new userDashboard();
         join();
     }
 
@@ -24,6 +25,12 @@ public class ChallengeController {
         newUserForm.okButtonAddListener(new newUserListener());
         newUserForm.setVisible(true);
 
+
+    }
+
+    public void populateDashboard(){
+        dashboard. theModel.myChallengeSummary("Will");
+
     }
 
     class newUserListener implements ActionListener {
@@ -32,6 +39,8 @@ public class ChallengeController {
         public void actionPerformed(ActionEvent actionEvent) {
             theModel.addParticipant(newUserForm.getUserName(), "ABC");
             newUserForm.dispose();
+            dashboard.setVisible(true);
+
 
         }
     }
