@@ -56,10 +56,11 @@ public class Challenge {
         String leaderboard = "";
 
         for (Person partipant : participants) {
-            leaderboard += partipant;
+            leaderboard += partipant.getName() + ":\t";
+            leaderboard += Integer.toString(partipant.getrunningTotalCO2()) + "g of CO2\n";
         }
 
-        return "";
+        return leaderboard;
     }
 
     @Override
@@ -89,6 +90,7 @@ public class Challenge {
 
         System.out.println(challenge.myChallengeSummary("Ryan"));
         System.out.println(challenge.myChallengeSummary("Mihai"));
+        System.out.println(challenge.leaderboard());
         // System.out.println(challenge.toString());
     }
 }

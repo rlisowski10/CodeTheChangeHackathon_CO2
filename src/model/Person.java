@@ -2,7 +2,7 @@ package model;
 
 import java.util.ArrayList;
 
-class Person {
+class Person implements Comparable<Person> {
     private String name;
     private ArrayList<Day> days;
     private int runningTotalCO2 = 0;
@@ -16,6 +16,10 @@ class Person {
 
     public String getName() {
         return name;
+    }
+
+    public int getrunningTotalCO2() {
+        return runningTotalCO2;
     }
 
     public void calcRunningTotalCO2() {
@@ -42,7 +46,7 @@ class Person {
     }
 
     public String toString() {
-        String personStringRepresentation = "Name: " + this.name + "\nCumulative CO2: " +  runningTotalCO2 + "\n";
+        String personStringRepresentation = "Name: " + this.name + "\nCumulative CO2: " + runningTotalCO2 + "\n";
 
         for (Day day : days) {
             personStringRepresentation += day.toString() + "\n";
