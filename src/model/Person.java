@@ -40,18 +40,4 @@ class Person {
 
         return personStringRepresentation;
     }
-
-    public static void main(String[] args) {
-        int five = 5;
-        System.out.println(five);
-        
-        Person testPerson = new Person("3");
-        System.out.println(testPerson.days.size());
-        testPerson.addDay(1, 20, "car");
-        testPerson.addDay(2, 10, "bus");
-        testPerson.addDay(3, 50, "car");
-
-        testPerson.calcRunningTotalCO2();
-        System.out.println("Total CO2: "+ testPerson.runningTotalCO2);
-    }
 }
