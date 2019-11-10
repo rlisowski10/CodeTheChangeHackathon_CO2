@@ -10,6 +10,7 @@ import java.awt.event.ActionListener;
 public class ChallengeController {
     private Challenge theModel;
     private userJoinChallenge newUserForm;
+    private userDashboard dashboard;
 
     public ChallengeController(Challenge theModel) {
         this.theModel = theModel;
@@ -19,9 +20,9 @@ public class ChallengeController {
     public void join() {
 
         userJoinChallenge newUser = new userJoinChallenge();
-        newUser.setVisible(true);
-//        newUserForm.okButtonAddListener(new newUserListener());
-
+        this.newUserForm = newUser;
+        newUserForm.okButtonAddListener(new newUserListener());
+        newUserForm.setVisible(true);
 
     }
 
@@ -29,8 +30,9 @@ public class ChallengeController {
 
         @Override
         public void actionPerformed(ActionEvent actionEvent) {
-            theModel.addParticipant(newUserForm.getName(), "ABC");
+            theModel.addParticipant(newUserForm.getUserName(), "ABC");
             newUserForm.dispose();
+
         }
     }
 

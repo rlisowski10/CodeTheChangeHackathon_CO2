@@ -1,5 +1,7 @@
 package view;
 
+import controller.ChallengeController;
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -81,11 +83,11 @@ public class userJoinChallenge extends JFrame {
 
                 //---- okButton ----
                 okButton.setText("OK");
-                okButton.setActionCommand("System.out.println(\"clicked ok\");;");
-                okButton.addActionListener(e -> {
-                    okButtonActionPerformed(e);
-                    okButtonActionPerformed(e);
-                });
+//                okButton.setActionCommand("System.out.println(\"clicked ok\");;");
+//                okButton.addActionListener(e -> {
+//                    okButtonActionPerformed(e);
+//                    okButtonActionPerformed(e);
+//                });
                 buttonBar.add(okButton, new GridBagConstraints(1, 0, 1, 1, 0.0, 0.0,
                         GridBagConstraints.CENTER, GridBagConstraints.BOTH,
                         new Insets(0, 0, 0, 0), 0, 0));
@@ -107,5 +109,13 @@ public class userJoinChallenge extends JFrame {
     private JTextField textField2;
     private JPanel buttonBar;
     private JButton okButton;
+
+    public void okButtonAddListener(ActionListener newUserListener) {
+        okButton.addActionListener(newUserListener);
+    }
+
+    public String getUserName(){
+        return textField2.getText();
+    }
     // JFormDesigner - End of variables declaration  //GEN-END:variables
 }

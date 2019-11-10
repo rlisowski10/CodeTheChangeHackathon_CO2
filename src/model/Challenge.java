@@ -14,6 +14,7 @@ public class Challenge {
     }
 
     public void addParticipant(String name, String challengeCode) {
+        System.out.println(name);
         Person newPerson = new Person(name, challengeCode);
         participants.add(newPerson);
     }
