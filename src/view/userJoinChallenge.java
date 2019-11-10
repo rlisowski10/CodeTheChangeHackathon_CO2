@@ -98,6 +98,14 @@ public class userJoinChallenge extends JFrame {
         // JFormDesigner - End of component initialization  //GEN-END:initComponents
     }
 
+    public String getName() {
+        return textField2.getText();
+    }
+
+    public void okButtonAddListener(ActionListener a) {
+        okButton.addActionListener(a);
+    }
+
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables
     // Generated using JFormDesigner Evaluation license - unknown
     private JPanel dialogPane;
