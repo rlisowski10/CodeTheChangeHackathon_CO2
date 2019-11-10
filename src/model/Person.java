@@ -37,7 +37,7 @@ class Person {
         int five = 5;
         System.out.println(five);
         
-        Person testPerson = new Person(3);
+        Person testPerson = new Person("3");
         System.out.println(testPerson.days.size());
         testPerson.addDay(1, 20, "car");
         testPerson.addDay(2, 10, "bus");
