@@ -46,7 +46,7 @@ public class ChallengeController {
 
 
     public void populateDashboard(){
-        System.out.println(theModel.leaderboard());
+        //System.out.println(theModel.leaderboard());
         dashboard.setLeaderboard(theModel.leaderboard());
         dashboard.setMyChallenge(theModel.myChallengeSummary("Ryan"));
 

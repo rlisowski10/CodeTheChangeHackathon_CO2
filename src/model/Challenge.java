@@ -11,12 +11,10 @@ public class Challenge {
 
     public Challenge(int numOfParticipants) {
         participants = new ArrayList<>();
-
-
     }
 
     public void addParticipant(String name, String challengeCode) {
-        System.out.println(name);
+        //System.out.println(name);
         Person newPerson = new Person(name, challengeCode);
         participants.add(newPerson);
     }
@@ -90,9 +88,9 @@ public class Challenge {
         challenge.addDailyData("Ryan", 3, 50, "car");
         challenge.addDailyData("Mihai", 3, 1, "train");
 
-        System.out.println(challenge.myChallengeSummary("Ryan"));
-        System.out.println(challenge.myChallengeSummary("Mihai"));
-        System.out.println(challenge.leaderboard());
+        //System.out.println(challenge.myChallengeSummary("Ryan"));
+        //System.out.println(challenge.myChallengeSummary("Mihai"));
+        //System.out.println(challenge.leaderboard());
         // System.out.println(challenge.toString());
     }
 }

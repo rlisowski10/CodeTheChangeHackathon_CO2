@@ -57,7 +57,7 @@ public class userDashboard extends JFrame {
 
             //======== tabbedPane1 ========
             {
-                tabbedPane1.setPreferredSize(new Dimension(550, 400));
+                tabbedPane1.setPreferredSize(new Dimension(550, 120));
 
                 //======== myChallenge ========
                 {

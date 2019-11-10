@@ -34,8 +34,8 @@ class Day implements IModeCO2 {
     }
 
     public String toString() {
-        return "Day " + this.dayNum + " | km: " + this.km + " | mode: " + this.mode
-        + "| Total daily CO2 (kg): " + this.dayCO2;
+        return "Day " + this.dayNum + " \t Distance: " + this.km + "km \t Mode: " + this.mode
+        + " \t Total daily CO2 (kg): " + this.dayCO2;
     }
 
 }
