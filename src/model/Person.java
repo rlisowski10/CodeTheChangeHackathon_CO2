@@ -6,13 +6,20 @@ class Person {
     private String name;
     private ArrayList<Day> days;
     private int runningTotalCO2 = 0;
+    private String challengeCode;
 
-    public Person(String name) {
+    public Person(String name, String challengeCode) {
         days = new ArrayList<Day>();
         this.name = name;
+        this.challengeCode = challengeCode;
+    }
+
+    public String getName() {
+        return name;
     }
 
     public void calcRunningTotalCO2() {
+        runningTotalCO2 = 0;
         for (Day day : days) {
             runningTotalCO2 += day.getDayCO2();
         }
@@ -21,10 +28,11 @@ class Person {
     public void addDay(int dayNum, int km, String mode) {
         Day day = new Day(dayNum, km, mode);
         days.add(day);
+        calcRunningTotalCO2();
     }
 
     public String toString() {
-        String personStringRepresentation = "Name: " + this.name + "\nCumulative CO2: " +  runningTotalCO2 + "\n";
+        String personStringRepresentation = "\nName: " + this.name + "\nCumulative CO2: " +  runningTotalCO2 + "\n";
 
         for (Day day : days) {
             personStringRepresentation += day.toString() + "\n";
