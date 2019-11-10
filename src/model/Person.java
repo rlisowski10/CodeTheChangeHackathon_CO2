@@ -2,7 +2,7 @@ package model;
 
 import java.util.ArrayList;
 
-class Person implements Comparable<Person> {
+class Person {
     private String name;
     private ArrayList<Day> days;
     private int runningTotalCO2 = 0;

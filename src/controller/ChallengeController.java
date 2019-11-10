@@ -16,6 +16,19 @@ public class ChallengeController {
         this.theModel = theModel;
         this.dashboard = new userDashboard();
         join();
+
+        this.theModel.addParticipant("Ryan", "ABC");
+        this.theModel.addParticipant("Mihai", "ABC");
+
+        this.theModel.addDailyData("Ryan", 1, 10, "car");
+        this.theModel.addDailyData("Mihai", 1, 5, "car");
+
+        this.theModel.addDailyData("Ryan", 2, 20, "bus");
+        this.theModel.addDailyData("Mihai", 2, 1, "train");
+
+        this.theModel.addDailyData("Ryan", 3, 50, "car");
+        this.theModel.addDailyData("Mihai", 3, 1, "train");
+
     }
 
     public void join() {
@@ -24,12 +37,18 @@ public class ChallengeController {
         this.newUserForm = newUser;
         newUserForm.okButtonAddListener(new newUserListener());
         newUserForm.setVisible(true);
+        populateDashboard();
 
 
     }
 
+
+
     public void populateDashboard(){
-        dashboard. theModel.myChallengeSummary("Will");
+        System.out.println(theModel.leaderboard());
+        dashboard.setLeaderboard(theModel.leaderboard());
+        dashboard.setMyChallenge(theModel.myChallengeSummary("Ryan"));
+
 
     }
 
@@ -37,7 +56,7 @@ public class ChallengeController {
 
         @Override
         public void actionPerformed(ActionEvent actionEvent) {
-            theModel.addParticipant(newUserForm.getUserName(), "ABC");
+//            theModel.addParticipant(newUserForm.getUserName(), "ABC");
             newUserForm.dispose();
             dashboard.setVisible(true);
 

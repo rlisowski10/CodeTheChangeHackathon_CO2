@@ -11,6 +11,8 @@ public class Challenge {
 
     public Challenge(int numOfParticipants) {
         participants = new ArrayList<>();
+
+
     }
 
     public void addParticipant(String name, String challengeCode) {

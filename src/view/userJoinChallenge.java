@@ -69,7 +69,7 @@ public class userJoinChallenge extends JFrame {
                 contentPanel.add(textField1, BorderLayout.CENTER);
 
                 //---- textField2 ----
-                textField2.setText("Will");
+                textField2.setText("Sam");
                 contentPanel.add(textField2, BorderLayout.WEST);
             }
             dialogPane.add(contentPanel, BorderLayout.CENTER);

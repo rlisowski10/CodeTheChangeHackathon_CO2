@@ -153,6 +153,10 @@ public class userDashboard extends JFrame {
     // JFormDesigner - End of variables declaration  //GEN-END:variables
 
     public void setMyChallenge(String s) {
-        myChallenge.
+        tab1TextArea.setText(s);
+    }
+
+    public void setLeaderboard(String leaderboard) {
+        tab2TextArea.setText(leaderboard);
     }
 }
