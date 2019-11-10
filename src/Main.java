@@ -6,12 +6,9 @@ public class Main {
 
     public static void main(String[] args) {
 
-//        userJoinChallenge viewUserJoinChallenge = new userJoinChallenge();
-        ChallengeController controller = new ChallengeController();
+        userJoinChallenge viewUserJoinChallenge = new userJoinChallenge();
+        //ChallengeController controller = new ChallengeController();
 
-
-//        viewUserJoinChallenge.setVisible(true);
-
-
+        viewUserJoinChallenge.setVisible(true);
     }
 }

@@ -31,8 +31,18 @@ class Person {
         calcRunningTotalCO2();
     }
 
+    public String getPersonDailyStats() {
+        String personDailyStats = "";
+
+        for (Day day : days) {
+            personDailyStats += day.toString() + "\n";
+        }
+
+        return personDailyStats;
+    }
+
     public String toString() {
-        String personStringRepresentation = "\nName: " + this.name + "\nCumulative CO2: " +  runningTotalCO2 + "\n";
+        String personStringRepresentation = "Name: " + this.name + "\nCumulative CO2: " +  runningTotalCO2 + "\n";
 
         for (Day day : days) {
             personStringRepresentation += day.toString() + "\n";

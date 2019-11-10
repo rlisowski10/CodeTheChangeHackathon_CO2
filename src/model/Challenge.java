@@ -19,8 +19,20 @@ public class Challenge {
     }
 
     public String addDailyData(String name, int day, int km, String modeTransportation) {
+        Person currentPerson = findParticipant(name);
+
+        if (currentPerson != null) {
+            currentPerson.addDay(day, km, modeTransportation);
+            return ("Daily activity logged.");
+        } else {
+            ;
+            return ("Error: Daily activity not logged.");
+        }
+    }
+
+    private Person findParticipant(String name) {
         Person currentPerson = null;
-        
+
         for (int i = 0; i < participants.size(); i++) {
             Person person = participants.get(i);
             String participantName = person.getName();
@@ -30,12 +42,23 @@ public class Challenge {
             }
         }
 
-        if (currentPerson != null) {
-            currentPerson.addDay(day, km, modeTransportation);
-            return("Daily activity logged.");
-        } else {;
-            return("Error: Daily activity not logged.");
+        return currentPerson;
+    }
+
+    public String myChallengeSummary(String name) {
+        Person currentPerson = findParticipant(name);
+
+        return currentPerson.toString();
+    }
+
+    public String leaderboard() {
+        String leaderboard = "";
+
+        for (Person partipant : participants) {
+            leaderboard += partipant;
         }
+
+        return "";
     }
 
     @Override
@@ -63,6 +86,8 @@ public class Challenge {
         challenge.addDailyData("Ryan", 3, 50, "car");
         challenge.addDailyData("Mihai", 3, 1, "train");
 
-        System.out.println(challenge.toString());
+        System.out.println(challenge.myChallengeSummary("Ryan"));
+        System.out.println(challenge.myChallengeSummary("Mihai"));
+        // System.out.println(challenge.toString());
     }
 }
