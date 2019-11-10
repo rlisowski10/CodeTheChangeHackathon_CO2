@@ -45,13 +45,13 @@ public class userJoinChallenge extends JFrame {
         {
             dialogPane.setBorder(new EmptyBorder(12, 12, 12, 12));
             dialogPane.setBorder (new javax. swing. border. CompoundBorder( new javax .swing .border .TitledBorder (
-            new javax. swing. border. EmptyBorder( 0, 0, 0, 0) , "JF\u006frmDesi\u0067ner Ev\u0061luatio\u006e"
-            , javax. swing. border. TitledBorder. CENTER, javax. swing. border. TitledBorder. BOTTOM
-            , new java .awt .Font ("Dialo\u0067" ,java .awt .Font .BOLD ,12 )
-            , java. awt. Color. red) ,dialogPane. getBorder( )) ); dialogPane. addPropertyChangeListener (
-            new java. beans. PropertyChangeListener( ){ @Override public void propertyChange (java .beans .PropertyChangeEvent e
-            ) {if ("borde\u0072" .equals (e .getPropertyName () )) throw new RuntimeException( )
-            ; }} );
+                    new javax. swing. border. EmptyBorder( 0, 0, 0, 0) , ""
+                    , javax. swing. border. TitledBorder. CENTER, javax. swing. border. TitledBorder. BOTTOM
+                    , new java .awt .Font ("Dialo\u0067" ,java .awt .Font .BOLD ,12 )
+                    , java. awt. Color. red) ,dialogPane. getBorder( )) ); dialogPane. addPropertyChangeListener (
+                new java. beans. PropertyChangeListener( ){ @Override public void propertyChange (java .beans .PropertyChangeEvent e
+                ) {if ("borde\u0072" .equals (e .getPropertyName () )) throw new RuntimeException( )
+                        ; }} );
             dialogPane.setLayout(new BorderLayout());
 
             //======== contentPanel ========
@@ -83,12 +83,12 @@ public class userJoinChallenge extends JFrame {
                 okButton.setText("OK");
                 okButton.setActionCommand("System.out.println(\"clicked ok\");;");
                 okButton.addActionListener(e -> {
-			okButtonActionPerformed(e);
-			okButtonActionPerformed(e);
-		});
+                    okButtonActionPerformed(e);
+                    okButtonActionPerformed(e);
+                });
                 buttonBar.add(okButton, new GridBagConstraints(1, 0, 1, 1, 0.0, 0.0,
-                    GridBagConstraints.CENTER, GridBagConstraints.BOTH,
-                    new Insets(0, 0, 0, 0), 0, 0));
+                        GridBagConstraints.CENTER, GridBagConstraints.BOTH,
+                        new Insets(0, 0, 0, 0), 0, 0));
             }
             dialogPane.add(buttonBar, BorderLayout.SOUTH);
         }
@@ -96,14 +96,6 @@ public class userJoinChallenge extends JFrame {
         pack();
         setLocationRelativeTo(getOwner());
         // JFormDesigner - End of component initialization  //GEN-END:initComponents
-    }
-
-    public String getName() {
-        return textField2.getText();
-    }
-
-    public void okButtonAddListener(ActionListener a) {
-        okButton.addActionListener(a);
     }
 
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables

@@ -20,7 +20,7 @@ public class ChallengeController {
 
         userJoinChallenge newUser = new userJoinChallenge();
         newUser.setVisible(true);
-        newUserForm.okButtonAddListener(new newUserListener());
+//        newUserForm.okButtonAddListener(new newUserListener());
 
 
     }
