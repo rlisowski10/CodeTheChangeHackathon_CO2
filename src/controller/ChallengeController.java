@@ -14,9 +14,6 @@ public class ChallengeController {
 
     public ChallengeController(Challenge theModel) {
         this.theModel = theModel;
-        this.dashboard = new userDashboard();
-        join();
-
         this.theModel.addParticipant("Ryan", "ABC");
         this.theModel.addParticipant("Mihai", "ABC");
 
@@ -28,6 +25,10 @@ public class ChallengeController {
 
         this.theModel.addDailyData("Ryan", 3, 50, "car");
         this.theModel.addDailyData("Mihai", 3, 1, "train");
+        this.dashboard = new userDashboard();
+        join();
+
+
 
     }
 
